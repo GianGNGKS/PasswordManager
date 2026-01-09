@@ -3,12 +3,10 @@
  */
 package passwordmanager;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import passwordmanager.cli.CommandlineInterface;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        new CommandlineInterface().start();
     }
 }

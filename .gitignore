@@ -3,3 +3,42 @@
 
 # Ignore Gradle build output directory
 build
+
+# Vault data file
+app/vault.dat
+vault.dat
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Gradle wrapper JAR
+gradle/wrapper/gradle-wrapper.jar
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Java compiled files 
+*.class
