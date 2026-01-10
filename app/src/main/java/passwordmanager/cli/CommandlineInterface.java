@@ -62,7 +62,7 @@ public class CommandlineInterface {
         switch (instruction) {
             case "help" -> printHelp();
             case "add" -> handleAdd(components);
-            case "get" -> handleGet(components);
+            case "show" -> handleShow(components);
             case "delete" -> handleDelete(components);
             case "list" -> handleList();
             case "exit" -> {
@@ -78,14 +78,14 @@ public class CommandlineInterface {
                 Available commands:
                 > add <name> <username> <password>\tAdds a new password for a named service along with a username.
                 > list\tShow registered services with available passwords.
-                > get\tObtain a particular password.
+                > show\tObtain a particular password.
                 > help\tShow this command.
                 > exit\tClose this app.
                 """);
     }
 
     private void handleAdd(String[] components) {
-        if (components.length < 4) {
+        if (components.length != 4) {
             System.out.println("Usage: add <name> <username> <password>");
             return;
         }
@@ -107,9 +107,9 @@ public class CommandlineInterface {
         }
     }
 
-    private void handleGet(String[] components) {
-        if (components.length < 2) {
-            System.out.println("Usage: get <service_name>");
+    private void handleShow(String[] components) {
+        if (components.length != 2) {
+            System.out.println("Usage: show <service_name>");
             return;
         }
 
@@ -132,7 +132,7 @@ public class CommandlineInterface {
 
     private void handleDelete(String[] components) {
         // 1. check components
-        if (components.length < 2) {
+        if (components.length != 2) {
             System.out.println("Usage: delete <service_name>");
             return;
         }
